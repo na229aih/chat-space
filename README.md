@@ -9,3 +9,9 @@
 |password|string|null: false|
 |nickname|string|null: false|
 ### Association
+
+## groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|groupname|string|null: false|
+### Association
