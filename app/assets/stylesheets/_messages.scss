@@ -16,7 +16,7 @@
   background-color: #2f3e51;
 
   &__top{
-    height: 100px;
+    height: 90px;
     background-color: #253141;
     position: relative;
 
@@ -80,13 +80,17 @@
   float: right;
 
   &__top{
-    height: 100px;
+    height: 90px;
     border-bottom: solid #eeeeee;
     padding: 0 40px;
+
+      &__group-name{
+
+      }
   }
 
   &__center{
-    height: calc(100vh - 100px - 90px);
+    height: calc(100vh - 90px - 90px);
     background-color: #fafafa;
   }
 
