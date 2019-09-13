@@ -35,11 +35,11 @@
         float: left;
         font-size: 16px;
         font-weight: bold;
-        color: white;
+        color: #ffffff;
       }
 
       &__icon{
-        color: white;
+        color: #ffffff;
         height: 20px;
         width: 40px;
         float: right;
@@ -57,7 +57,11 @@
 
     &__group-name{
       height: 20px;
-      
+      width: 260px;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: bold;
+      margin: 0 auto;
     }
   }
 }
