@@ -81,10 +81,16 @@
 
   &__top{
     height: 100px;
+    border-bottom: solid #eeeeee;
+  }
+
+  &__center{
+    height: calc(100vh - 100px - 90px);
+    background-color: #fafafa;
   }
 
   &__bottom{
-    height: calc(100vh - 100px);
-    background-color: #fafafa;
+    height: 90px;
+    background-color: #dddddd;
   }
 }
