@@ -29,36 +29,26 @@
       left: 50%;
       transform: translate(-50%, -50%);
 
-      &__name{
-        height: 20px;
-        width: 220px;
-        float: left;
-        font-size: 16px;
-        font-weight: bold;
-        color: white;
-      }
+        &__name{
+          height: 20px;
+          width: 220px;
+          float: left;
+          font-size: 16px;
+          font-weight: bold;
+          color: white;
+        }
 
-      &__icon{
-        color: white;
-        height: 20px;
-        width: 40px;
-        float: right;
-        text-align: right;
-      }
+        &__icon{
+          color: white;
+          height: 20px;
+          width: 40px;
+          float: right;
+          text-align: right;
+        }
     }
   }
 
-  &__bottom{
-    height: calc(100vh - 100px);
-
-    &__space20{
-      height: 20px;
-    }
-
-    &__group-name{
-      height: 20px;
-    }
-  }
+  
 }
 
 .right-contents{
