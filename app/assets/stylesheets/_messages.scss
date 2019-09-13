@@ -50,6 +50,7 @@
 
   &__bottom{
     height: calc(100vh - 100px);
+    overflow: scroll;
 
     &__space20{
       height: 20px;
