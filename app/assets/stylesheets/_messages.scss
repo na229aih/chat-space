@@ -84,9 +84,13 @@
     border-bottom: solid #eeeeee;
     padding: 0 40px;
 
-      &__group-name{
-
-      }
+    &__group-name{
+      height: 75px;
+      width: calc(100vw - 300px);
+      color: #333333;
+      font-size: 20px;
+      padding: 35px 0 15px;
+    }
   }
 
   &__center{
