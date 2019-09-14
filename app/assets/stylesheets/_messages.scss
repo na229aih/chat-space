@@ -84,13 +84,42 @@
     border-bottom: solid #eeeeee;
     padding: 0 40px;
 
-    &__group-name{
-      height: 25px;
-      width: calc(100vw - 500px);
-      color: #333333;
-      font-size: 20px;
-      padding: 35px 0 15px;
-      line-height: 25px;
+    &__box{
+      height: 75px;
+
+      &__left{
+        height: 25px;
+        width: calc(100vw - 500px - 40px);
+        color: #333333;
+        font-size: 20px;
+        padding: 35px 0 15px;
+        line-height: 25px;
+        float: left;
+      }
+  
+      &__right{
+        height: 75px;
+        width: 85px;
+        float: right;
+
+        &__edit{
+          height: 40px;
+          color: #38AEF0;
+          border: 1px solid #38AEF0;
+          font-size: 18px;
+          text-align: center;
+          padding: 0 20px;
+          margin: 28px 0 0;
+          line-height: 40px;
+        }
+      }
+    }
+
+    &__member{
+      height: 15px;
+      color: #999999;
+      font-size: 12px;
+      line-height: 15px;
     }
   }
 
