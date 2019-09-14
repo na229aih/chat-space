@@ -40,8 +40,10 @@
 
   .right-contents__bottom
     %form.right-contents__bottom__box
-      %input.right-contents__bottom__box--message{:placeholder => "type a message", :type => "text"}
-        %label.right-contents__bottom__box--message--icon
+      .right-contents__bottom__box__message
+        %input.right-contents__bottom__box__message--textarea{:placeholder => "type a message", :type => "text"}
+      .right-contents__bottom__box__icon
+        %label.right-contents__bottom__icon--image
           = fa_icon 'image'
       .right-contents__bottom__box__send
         Send
