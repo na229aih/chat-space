@@ -1,7 +1,9 @@
+$whitecolor: #ffffff;
+
 .header {
   height: 22px;
   background-color: #38AEF0;
-  color: #ffffff;
+  color: $whitecolor;
   &__logo {
     text-align: center;
     font-size: 16px;
@@ -35,11 +37,11 @@
         float: left;
         font-size: 16px;
         font-weight: bold;
-        color: #ffffff;
+        color: $whitecolor;
       }
 
       &__icon{
-        color: #ffffff;
+        color: $whitecolor;
         height: 20px;
         width: 40px;
         float: right;
@@ -55,7 +57,7 @@
     &__group-name{
       height: 20px;
       width: 260px;
-      color: #ffffff;
+      color: $whitecolor;
       font-size: 15px;
       font-weight: bold;
       padding: 20px 0 5px;
@@ -65,7 +67,7 @@
     &__text-name{
       height: 15px;
       width: 260px;
-      color: #ffffff;
+      color: $whitecolor;
       font-size: 11px;
       font-weight: bold;
       padding-bottom: 40px;
@@ -173,13 +175,13 @@
       &__message{
         height: 50px;
         width: calc(100vw - 300px - 80px - 100px - 15px - 40px);
-        background-color: #ffffff;
+        background-color: $whitecolor;
         float: left;
 
         &--textarea{
           height: 50px;
           width: calc(100vw - 300px - 80px - 100px - 15px - 40px - 10px);
-          background-color: #ffffff;
+          background-color: $whitecolor;
           border: none;
           padding-left: 10px;
         }
@@ -188,11 +190,12 @@
       &__icon{
           height: 50px;
           width: 30px;
-          background-color: #ffffff;
+          background-color: $whitecolor;
           padding-right: 10px;
           float: left;
-          font-size: 22px;
+          font-size: 21px;
           line-height: 50px;
+          text-align: center;
       }
 
       &__send{
