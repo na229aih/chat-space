@@ -39,3 +39,9 @@
     = render "message-list"
 
   .right-contents__bottom
+    %form.right-contents__bottom__box
+      %input.right-contents__bottom__box--message{:placeholder => "type a message", :type => "text"}
+        %label.right-contents__bottom__box--message--icon
+          = fa_icon 'image'
+      .right-contents__bottom__box__send
+        Send

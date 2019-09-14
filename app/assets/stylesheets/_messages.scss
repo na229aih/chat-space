@@ -165,5 +165,41 @@
   &__bottom{
     height: 90px;
     background-color: #dddddd;
+    padding: 0 40px;
+
+    &__box{
+      height: 50px;
+      padding: 20px 0;
+
+      &--message{
+        height: 50px;
+        width: calc(100vw - 300px - 80px - 100px - 15px - 50px);
+        background-color: #ffffff;
+        float: left;
+        border: none;
+        padding: 0 40px 0 10px;
+      }
+
+      // &__icon{
+      //   height: 50px;
+      //   width: 30px;
+      //   background-color: #ffffff;
+      //   float: left;
+      //   padding-right: 10px;
+      //   font-size: 22px;
+      //   line-height: 50px;
+      // }
+
+      &__send{
+        height: 50px;
+        width: 100px;
+        background-color: #38AEF0;
+        font-size: 18px;
+        color: #ffffff;
+        line-height: 50px;
+        float: right;
+        text-align: center;
+      }
+    }
   }
 }
