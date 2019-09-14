@@ -127,6 +127,7 @@
     height: calc(100vh - 90px - 90px);
     background-color: #fafafa;
     padding: 0 40px;
+    overflow: scroll;
 
     &__top{
       height: 80px;
@@ -151,8 +152,13 @@
       }
     }
 
-    &__bottom-box{
+    &__bottom{
       height: 55px;
+
+      &__message{
+        font-size: 14px;
+        color: #434a54;
+      }
     }
   }
 
