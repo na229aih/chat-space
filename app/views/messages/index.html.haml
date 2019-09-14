@@ -1,0 +1,49 @@
+.header
+  .header__logo
+    グループを作成しました
+
+.left-contents
+  .left-contents__top
+    .left-contents__top__user
+      .left-contents__top__user__name
+        user-name
+      .left-contents__top__user__icon
+        = fa_icon 'edit'
+        = fa_icon 'cog'
+
+  .left-contents__bottom
+    = render "groups"
+    = render "groups"
+    = render "groups"
+    = render "groups"
+    = render "groups"
+    = render "groups"
+    = render "groups"
+    
+
+.right-contents
+  .right-contents__top
+    .right-contents__top__box
+      .right-contents__top__box__left
+        group1
+      .right-contents__top__box__right
+        .right-contents__top__box__right__edit
+          Edit
+    .right-contents__top__member
+      Member : user1
+  .right-contents__center
+    = render "messages"
+    = render "messages"
+    = render "messages"
+    = render "messages"
+    = render "messages"
+
+  .right-contents__bottom
+    %form.right-contents__bottom__box
+      .right-contents__bottom__box__message
+        %input.right-contents__bottom__box__message--textarea{:placeholder => "type a message", :type => "text"}
+      .right-contents__bottom__box__icon
+        %label.right-contents__bottom__icon--image
+          = fa_icon 'image'
+      .right-contents__bottom__box__send
+        Send
