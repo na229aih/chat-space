@@ -6,11 +6,11 @@
   .left-contents__top
     .left-contents__top__user
       .left-contents__top__user__name
-        -# = current_user.name
+        = current_user.name
       .left-contents__top__user__icon
         = fa_icon 'edit'
-        -# = link_to edit_user_path(current_user) do
-        -#   = fa_icon 'cog'
+        = link_to edit_user_path(current_user) do
+          = fa_icon 'cog'
 
   .left-contents__bottom
     = render "groups"
