@@ -12,7 +12,7 @@
     .right-contents__top__member
       Member : user1
   .right-contents__center
-    = render "shared/messages"
+    = render partial:"shared/message",collection: @messages
 
   .right-contents__bottom
     = form_for [@group, @message] do |f|
