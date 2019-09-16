@@ -1,25 +1,29 @@
 .left-contents
-  = render "side-ber"
+  = render "shared/side-ber"
 
 .right-contents
   .right-contents__top
     .right-contents__top__box
       .right-contents__top__box__left
-        group1
+        = @group.name
       .right-contents__top__box__right
         .right-contents__top__box__right__edit
-          Edit
+          = link_to "Edit", edit_group_path(current_user)
+
     .right-contents__top__member
-      Member : user1
+      = "Member："
+      - @group.users.each do |user|
+        = user.name
+
   .right-contents__center
-    = render "messages"
+    = render partial:"shared/message",collection: @messages
 
   .right-contents__bottom
-    %form.right-contents__bottom__box
-      .right-contents__bottom__box__message
-        %input.right-contents__bottom__box__message--textarea{:placeholder => "type a message", :type => "text"}
-      .right-contents__bottom__box__icon
-        %label.right-contents__bottom__icon--image
-          = fa_icon 'image'
-      .right-contents__bottom__box__send
-        Send
+    = form_for [@group, @message] do |f|
+      = f.text_field :body, class: 'right-contents__bottom__message', placeholder: 'type a message'
+
+      = f.label :image, class: 'right-contents__bottom__image' do
+        = fa_icon 'image', class: 'right-contents__bottom__image--icon'
+        = f.file_field :image, class: 'right-contents__bottom__image--hidden'
+
+      = f.submit 'Send', class: 'right-contents__bottom__submit'
