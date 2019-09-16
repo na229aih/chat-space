@@ -1,5 +1,5 @@
 .left-contents
-  = render "sahred/side-ber"
+  = render "shared/side-ber"
 
 .right-contents
   .right-contents__top
@@ -15,31 +15,11 @@
     = render "shared/messages"
 
   .right-contents__bottom
-    %form.right-contents__bottom__box
-      .right-contents__bottom__box__message
-        %input.right-contents__bottom__box__message--textarea{:placeholder => "type a message", :type => "text"}
-      .right-contents__bottom__box__icon
-        %label.right-contents__bottom__icon--image
-          = fa_icon 'image'
-      .right-contents__bottom__box__send
-        Send
+    = form_for [@group, @message] do |f|
+      = f.text_field :body, class: 'right-contents__bottom__message', placeholder: 'type a message'
 
+      = f.label :image, class: 'right-contents__bottom__image' do
+        = fa_icon 'image', class: 'right-contents__bottom__image--icon'
+        = f.file_field :image, class: 'right-contents__bottom__image--hidden'
 
--# .form
--#       = form_for [@group, @message] do |f|
--#         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
--#         .form__mask
--#           = f.label :image, class: 'form__mask__image' do
--#             = fa_icon 'picture-o', class: 'icon'
--#             = f.file_field :image, class: 'hidden'
--#         = f.submit 'Send', class: 'form__submit'
-
--# .right-contents__bottom
--#     %form.right-contents__bottom__box
--#       .right-contents__bottom__box__message
--#         %input.right-contents__bottom__box__message--textarea{:placeholder => "type a message", :type => "text"}
--#       .right-contents__bottom__box__icon
--#         %label.right-contents__bottom__icon--image
--#           = fa_icon 'image'
--#       .right-contents__bottom__box__send
--#         Send
+      = f.submit 'Send', class: 'right-contents__bottom__submit'
