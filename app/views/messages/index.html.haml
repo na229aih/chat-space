@@ -5,12 +5,16 @@
   .right-contents__top
     .right-contents__top__box
       .right-contents__top__box__left
-        group1
+        = @group.name
       .right-contents__top__box__right
         .right-contents__top__box__right__edit
-          Edit
+          = link_to "Edit", edit_group_path(current_user)
+
     .right-contents__top__member
-      Member : user1
+      = "Member："
+      - @group.users.each do |user|
+        = user.name
+
   .right-contents__center
     = render partial:"shared/message",collection: @messages
 
