@@ -1,6 +1,7 @@
 $(function(){
 
   function build_message(message){
+    // let image = 
     let html = `<div class="right-contents__center__top">
                   <div class="right-contents__center__top__box">
                     <div class="right-contents__center__top__box__user-name">
@@ -10,15 +11,12 @@ $(function(){
                       ${message.date}
                     </div>
                   </div>
+                </div>
+                <div class="right-contents__center__bottom">
+                  <div class="right-contents__center__bottom__message">
+                    ${message.body}
+                  </div>
                 </div>`
-                // <div class="right-contents__center__bottom">
-                //   ${if(message.body.present?)}
-                //     <div class="right-contents__center__bottom__message">
-                //       ${message.body}
-                //       ${image_tag message.image.url if message.image.present?}
-                //     </div>
-                //   ${end}
-                // </div>
     return html;
   }
 
@@ -41,6 +39,8 @@ $(function(){
       let html = build_message(message);
       $('.right-contents__center').append(html);
       $('.right-contents__bottom__message').val('');
+      $(".right-contents__bottom__submit").removeAttr("disabled");
+      $('.right-contents__center').animate({ scrollTop: $('.right-contents__center')[0].scrollHeight});
     })
 
     .fail(function(){
