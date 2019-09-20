@@ -1,11 +1,13 @@
-.right-contents__center__top
-  .right-contents__center__top__box
-    .right-contents__center__top__box__user-name
-      = message.user.name
-    .right-contents__center__top__box__time
-      = message.created_at.strftime("%Y/%m/%d %H:%M")
+.right-contents__center__message
+  .right-contents__center__message__top
+    .right-contents__center__message__top__box
+      .right-contents__center__message__top__box__user-name
+        = message.user.name
+      .right-contents__center__message__top__box__time
+        = message.created_at.strftime("%Y/%m/%d %H:%M")
 
-.right-contents__center__bottom
-  .right-contents__center__bottom__message
-    = message.body if message.body.present?
-    = image_tag message.image.url if message.image.present?
+  .right-contents__center__message__bottom
+    .right-contents__center__message__bottom__text
+      = message.body if message.body.present?
+    .right-contents__center__message__bottom__image
+      = image_tag message.image.url if message.image.present?

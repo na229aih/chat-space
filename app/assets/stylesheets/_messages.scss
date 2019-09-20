@@ -119,38 +119,41 @@ $whitecolor: #ffffff;
   &__center{
     height: calc(100vh - 90px - 90px);
     background-color: #fafafa;
-    padding: 0 40px;
+    padding: 40px 40px 20px;
     overflow: scroll;
 
-    &__top{
-      height: 80px;
+    &__message{
+      padding-bottom: 40px;
 
-      &__box{
-        height: 24px;
-        padding:46px 0 10px;
+      &__top{
 
-        &__user-name{
-          font-size: 16px;
-          font-weight: bold;
-          color: #434A54;
-          float: left;
-        }
+        &__box{
+          height: 24px;
+          padding:0 0 10px;
 
-        &__time{
-          font-size: 12px;
-          color: #999999;
-          margin-left: 10px;
-          float: left;
+          &__user-name{
+            font-size: 16px;
+            font-weight: bold;
+            color: #434A54;
+            float: left;
+          }
+
+          &__time{
+            font-size: 12px;
+            color: #999999;
+            margin-left: 10px;
+            float: left;
+          }
         }
       }
-    }
 
-    &__bottom{
-      height: 55px;
+      &__bottom{
 
-      &__message{
-        font-size: 14px;
-        color: #434a54;
+        &__text{
+          font-size: 14px;
+          color: #434a54;
+          padding-bottom: 10px;
+        }
       }
     }
   }

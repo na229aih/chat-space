@@ -2,20 +2,24 @@ $(function(){
   function build_message(message){
     let image = (message.image? `<img src = ${message.image}>`: "");
 
-    let html = `<div class="right-contents__center__top">
-                  <div class="right-contents__center__top__box">
-                    <div class="right-contents__center__top__box__user-name">
-                      ${message.name}
-                    </div>
-                    <div class="right-contents__center__top__box__time">
-                      ${message.date}
+    let html = `<div class="right-contents__center__message" data-message_id=${message.id}>
+                  <div class="right-contents__center__message__top">
+                    <div class="right-contents__center__message__top__box">
+                      <div class="right-contents__center__message__top__box__user-name">
+                        ${message.name}
+                      </div>
+                      <div class="right-contents__center__message__top__box__time">
+                        ${message.date}
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="right-contents__center__bottom">
-                  <div class="right-contents__center__bottom__message" data-message_id=${message.id}>
-                    ${message.body}
-                    ${image}
+                  <div class="right-contents__center__message__bottom">
+                    <div class="right-contents__center__message__bottom__message">
+                      ${message.body}
+                    </div>
+                    <div class="right-contents__center__message__bottom__message">
+                      ${image}
+                    </div>
                   </div>
                 </div>`
     return html;
