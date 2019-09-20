@@ -1,7 +1,7 @@
 $(function(){
-
   function build_message(message){
-    // let image = 
+    let text = (message.image?  "": "");
+
     let html = `<div class="right-contents__center__top">
                   <div class="right-contents__center__top__box">
                     <div class="right-contents__center__top__box__user-name">
@@ -13,14 +13,14 @@ $(function(){
                   </div>
                 </div>
                 <div class="right-contents__center__bottom">
-                  <div class="right-contents__center__bottom__message">
-                    ${message.body}
+                  <div class="right-contents__center__bottom__message" data-message_id=${message.id}>
+                    ${text}
                   </div>
                 </div>`
     return html;
   }
 
-  $('.new_message').on('submit', function(e){
+  $('.new_message').on('submit',function(e){
 
     e.preventDefault();
     let formdata = new FormData(this);
@@ -44,7 +44,7 @@ $(function(){
     })
 
     .fail(function(){
-      alert('エラー');
+      alert('メッセージを入力してください');
     })
   })
 });
