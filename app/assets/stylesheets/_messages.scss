@@ -117,7 +117,7 @@ $whitecolor: #ffffff;
   }
 
   &__center{
-    height: calc(100vh - 90px - 90px);
+    height: calc(100vh - 90px - 90px - 60px);
     background-color: #fafafa;
     padding: 40px 40px 20px;
     overflow: scroll;
