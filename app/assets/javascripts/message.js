@@ -1,6 +1,6 @@
 $(function(){
   function build_message(message){
-    let text = (message.image?  "": "");
+    let image = (message.image? `<img src = ${message.image}>`: "");
 
     let html = `<div class="right-contents__center__top">
                   <div class="right-contents__center__top__box">
@@ -14,7 +14,8 @@ $(function(){
                 </div>
                 <div class="right-contents__center__bottom">
                   <div class="right-contents__center__bottom__message" data-message_id=${message.id}>
-                    ${text}
+                    ${message.body}
+                    ${image}
                   </div>
                 </div>`
     return html;
@@ -38,7 +39,7 @@ $(function(){
     .done(function(message){
       let html = build_message(message);
       $('.right-contents__center').append(html);
-      $('.right-contents__bottom__message').val('');
+      $('.new_message')[0].reset();
       $(".right-contents__bottom__submit").removeAttr("disabled");
       $('.right-contents__center').animate({ scrollTop: $('.right-contents__center')[0].scrollHeight});
     })
