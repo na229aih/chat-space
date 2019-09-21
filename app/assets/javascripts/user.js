@@ -17,6 +17,15 @@ $(function() {
     search_list.append(html);
   }
 
+  function appendchatmember(user_data) {
+    let html = `<div class='chat-group-user'>
+                  <input name='group[user_ids][]' type='hidden' value='${user_data.userId}'>
+                  <p class='chat-group-user__name'>${user_data.userName}</p>
+                  <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</div>
+                </div>`
+    $(".chat-group-users.js-add-user").append(html);
+  }
+
   $("#user-search-field.chat-group-form__input").on("keyup", function() {
     let input = $("#user-search-field.chat-group-form__input").val();
 
@@ -48,8 +57,13 @@ $(function() {
   $(document).on("click", ".user-search-add", function(){
     user_box = $(this).parent();
     user_box.remove();
-    $(".chat-group-users.js-add-user").append(user_box);
-    user_box.remove(".user-search-add");
+    let user_data = $(this).data();
+    appendchatmember(user_data);
+  });
+
+  $(document).on("click", ".user-search-remove", function(){
+    user_box = $(this).parent();
+    user_box.remove();
   });
 
 });
