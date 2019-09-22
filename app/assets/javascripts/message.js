@@ -52,4 +52,37 @@ $(function(){
       alert('メッセージを入力してください');
     })
   })
+
+  let reloadMessages = function() {
+    last_message_id = $('.right-contents__center__message:last').data();
+    console.log(last_message_id.messageId);
+    
+    $.ajax({
+      url: 'api/messages',
+      type: 'get',
+      dataType: 'json',
+      data: {id: last_message_id.messageId}
+    })
+
+    .done(function(messages) {
+      let insertHTML = '';
+
+      if (messages.length !== 0) {
+        messages.forEach(function(message){
+          insertHTML = build_message(message);
+          $('.right-contents__center').append(insertHTML);
+        });
+      }
+
+      $('.right-contents__center').animate({ scrollTop: $('.right-contents__center')[0].scrollHeight});
+    })
+    
+    .fail(function() {
+      console.log('error');
+    });
+
+  };
+
+  setInterval(reloadMessages, 10000);
+  
 });
