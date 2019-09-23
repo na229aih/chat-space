@@ -71,9 +71,8 @@ $(function(){
           insertHTML = build_message(message);
           $('.right-contents__center').append(insertHTML);
         });
+        $('.right-contents__center').animate({ scrollTop: $('.right-contents__center')[0].scrollHeight});
       }
-
-      $('.right-contents__center').animate({ scrollTop: $('.right-contents__center')[0].scrollHeight});
     })
     
     .fail(function() {
