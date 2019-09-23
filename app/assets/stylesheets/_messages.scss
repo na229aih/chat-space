@@ -78,7 +78,7 @@ $whitecolor: #ffffff;
 
   &__top{
     height: 90px;
-    border-bottom: solid #eeeeee;
+    border-bottom: solid 1px #eeeeee;
     padding: 0 40px;
 
     &__box{
@@ -125,7 +125,7 @@ $whitecolor: #ffffff;
   }
 
   &__center{
-    height: calc(100vh - 90px - 90px - 60px);
+    height: calc(100vh - 90px - 90px - 60px - 1px);
     background-color: #fafafa;
     padding: 40px 40px 20px;
     overflow: scroll;
