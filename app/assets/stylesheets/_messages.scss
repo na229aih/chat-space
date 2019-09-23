@@ -49,6 +49,10 @@ $whitecolor: #ffffff;
     height: calc(100vh - 100px);
     overflow: scroll;
 
+    a{
+      text-decoration: none;
+    }
+
     &__group-name{
       height: 20px;
       width: 260px;
