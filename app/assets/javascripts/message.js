@@ -2,7 +2,7 @@ $(function(){
   function build_message(message){
     let image = (message.image? `<img src = ${message.image}>`: "");
 
-    let html = `<div class="right-contents__center__message" data-message_id=${message.id}>
+    let html = `<div class="right-contents__center__message" data-message-id=${message.id}>
                   <div class="right-contents__center__message__top">
                     <div class="right-contents__center__message__top__box">
                       <div class="right-contents__center__message__top__box__user-name">
@@ -14,10 +14,10 @@ $(function(){
                     </div>
                   </div>
                   <div class="right-contents__center__message__bottom">
-                    <div class="right-contents__center__message__bottom__message">
+                    <div class="right-contents__center__message__bottom__text">
                       ${message.body}
                     </div>
-                    <div class="right-contents__center__message__bottom__message">
+                    <div class="right-contents__center__message__bottom__image">
                       ${image}
                     </div>
                   </div>
@@ -55,7 +55,6 @@ $(function(){
 
   let reloadMessages = function() {
     last_message_id = $('.right-contents__center__message:last').data();
-    console.log(last_message_id.messageId);
     
     $.ajax({
       url: 'api/messages',
@@ -82,7 +81,9 @@ $(function(){
     });
 
   };
-
-  setInterval(reloadMessages, 10000);
+  
+  if(document.URL.match("/messages")){
+    setInterval(reloadMessages, 5000);
+  }
   
 });
